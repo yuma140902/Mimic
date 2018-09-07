@@ -10,6 +10,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
+import yuma140902.mimic.blocks.MyBlocks;
+import yuma140902.mimic.items.MyItems;
+import yuma140902.mimic.recipes.Recipes;
 
 @Mod(modid = ModMimic.MOD_ID, useMetadata = true)
 public class ModMimic {
@@ -58,13 +61,13 @@ public class ModMimic {
 		loadModMetadata(modMetadata);
 		loadConfig();
 		
-//		MyBlocks.register();
-//		MyItems.register();
+		MyBlocks.register();
+		MyItems.register();
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-//		Recipes.register();
+		Recipes.register();
 //		WorldGenerators.register();
 	}
 }
